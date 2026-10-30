@@ -1,0 +1,101 @@
+@config "../../tailwind.config.ts";
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+	color-scheme: light;
+	--page-bg: #f1f5f9;
+	--surface-bg: #ffffff;
+	--surface-raised: #f8fafc;
+	--foreground: #0f172a;
+	--muted: #334155;
+	--subtle: #475569;
+	--border: rgb(15 23 42 / 12%);
+	--nav-bg: rgb(255 255 255 / 90%);
+	--hero-from: #eff6ff;
+	--hero-via: #ffffff;
+	--hero-to: #eef2ff;
+}
+
+.dark {
+	color-scheme: dark;
+	--page-bg: #06162b;
+	--surface-bg: #091d36;
+	--surface-raised: #07162b;
+	--foreground: #f8fafc;
+	--muted: #cbd5e1;
+	--subtle: #94a3b8;
+	--border: rgb(147 197 253 / 10%);
+	--nav-bg: rgb(6 22 43 / 90%);
+	--hero-from: #0a2443;
+	--hero-via: #071a32;
+	--hero-to: #061329;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		background-color: var(--page-bg);
+		color: var(--foreground);
+	}
+}
+
+body {
+	font-family: var(--font-sans);
+}
+
+@layer components {
+	.theme-page {
+		background-color: var(--page-bg);
+		color: var(--foreground);
+	}
+
+	.theme-nav {
+		border-color: var(--border);
+		background-color: var(--nav-bg);
+	}
+
+	.theme-panel {
+		border-color: var(--border);
+		background-color: var(--surface-bg);
+	}
+
+	.theme-panel-raised {
+		border-color: var(--border);
+		background-color: var(--surface-raised);
+	}
+
+	.theme-hero {
+		border-color: var(--border);
+		background-image: linear-gradient(
+			to bottom right,
+			var(--hero-from),
+			var(--hero-via),
+			var(--hero-to)
+		);
+	}
+
+	.theme-title {
+		color: var(--foreground);
+	}
+
+	.theme-copy {
+		color: var(--muted);
+	}
+
+	.theme-subtle {
+		color: var(--subtle);
+	}
+
+	.theme-toggle {
+		border-color: var(--border);
+		background-color: var(--surface-bg);
+	}
+}
+
+::selection {
+	background: rgb(37 99 235 / 35%);
+}
