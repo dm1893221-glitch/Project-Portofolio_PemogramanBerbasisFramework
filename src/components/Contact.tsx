@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react";
-import { Mail } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 
 type SocialIconProps = ComponentProps<"svg">;
 
@@ -54,34 +54,68 @@ const contactLinks = [
 		href: "https://www.linkedin.com/in/danis-martanius-bb8781446/?isSelfProfile=true",
 		icon: LinkedInIcon,
 	},
-	{
-		label: "Email",
-		href: "mailto:martaniusdanis@gmail.com",
-		icon: Mail,
-	},
 ];
 
 export default function Contact() {
 	return (
 		<section
 			id="contact"
-			aria-label="Kontak dan media sosial"
-			className="theme-hero scroll-mt-28 my-16 rounded-3xl border px-6 py-10 sm:px-10"
+			aria-labelledby="contact-title"
+			className="theme-hero flex min-h-[calc(100svh-4rem)] scroll-mt-16 items-center justify-center rounded-3xl border px-6 py-10 sm:px-10"
 		>
-			<div className="flex justify-center gap-4">
-				{contactLinks.map(({ label, href, icon: Icon }) => (
-					<a
-						key={label}
-						href={href}
-						target={label === "Email" ? undefined : "_blank"}
-						rel={label === "Email" ? undefined : "noopener noreferrer"}
-						aria-label={label}
-						title={label}
-						className="theme-panel-raised flex size-14 items-center justify-center rounded-2xl border border-blue-600/15 text-blue-700 transition hover:-translate-y-1 hover:border-blue-300/50 hover:bg-blue-500/15 hover:text-blue-900 dark:border-blue-300/15 dark:text-blue-200 dark:hover:text-white"
+			<div className="theme-panel relative w-full max-w-3xl overflow-hidden rounded-3xl border px-6 py-10 text-center shadow-xl shadow-blue-950/10 sm:px-12 sm:py-14">
+				<div className="pointer-events-none absolute -right-20 -top-24 size-64 rounded-full bg-blue-500/10 blur-3xl" />
+
+				<div className="relative">
+					<p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 dark:text-blue-300">
+						Hubungi Saya
+					</p>
+					<h2
+						id="contact-title"
+						className="theme-title text-3xl font-bold sm:text-4xl"
 					>
-						<Icon className="size-5" aria-hidden="true" />
+						Mari Terhubung
+					</h2>
+					<p className="theme-subtle mx-auto mt-4 max-w-xl text-sm leading-7 sm:text-base">
+						Punya pertanyaan atau ingin berdiskusi tentang proyek?
+						Silakan hubungi saya melalui email atau kunjungi media sosial.
+					</p>
+
+					<a
+						href="mailto:martaniusdanis@gmail.com"
+						className="mt-7 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-950/30 transition hover:-translate-y-0.5 hover:bg-blue-500"
+					>
+						<Mail className="size-4" aria-hidden="true" />
+						Kirim Email
+						<ArrowUpRight className="size-4" aria-hidden="true" />
 					</a>
-				))}
+
+					<div className="mt-9 grid gap-3 sm:grid-cols-3">
+						{contactLinks.map(({ label, href, icon: Icon }) => (
+							<a
+								key={label}
+								href={href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="theme-panel-raised group flex items-center justify-between gap-3 rounded-xl border p-4 text-left transition hover:-translate-y-0.5 hover:border-blue-300/40 hover:bg-blue-500/5"
+							>
+								<span className="flex items-center gap-3">
+									<Icon
+										className="size-5 shrink-0 text-blue-700 dark:text-blue-300"
+										aria-hidden="true"
+									/>
+									<span className="theme-title text-sm font-semibold">
+										{label}
+									</span>
+								</span>
+								<ArrowUpRight
+									className="size-4 text-slate-400 transition group-hover:text-blue-500"
+									aria-hidden="true"
+								/>
+							</a>
+						))}
+					</div>
+				</div>
 			</div>
 		</section>
 	);

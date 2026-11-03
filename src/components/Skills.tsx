@@ -112,7 +112,10 @@ function SkillIcon({ icon }: { icon: (typeof skills)[number]["icon"] }) {
 
 export default function Skills() {
 	return (
-		<section id="skills" className="scroll-mt-28 py-8">
+		<section
+			id="skills"
+			className="flex min-h-[calc(100svh-4rem)] scroll-mt-10 flex-col justify-center py-8"
+		>
 			<h2 className="theme-title mb-7 text-3xl font-bold sm:text-4xl">
 				My Skills
 			</h2>

@@ -1,13 +1,13 @@
 
-import { Code2, ExternalLink } from "lucide-react";
+import { Eye } from "lucide-react";
+import Image from "next/image";
 
 type Project = {
 	title: string;
 	category: string;
 	description: string;
+	image?: string;
 	technologies: string[];
-	repositoryUrl: string | null;
-	demoUrl: string | null;
 };
 
 const projects: Project[] = [
@@ -16,27 +16,24 @@ const projects: Project[] = [
 		category: "Web Application",
 		description:
 			"Aplikasi presensi karyawan berbasis web menggunakan QR Code untuk membantu pencatatan dan pengelolaan kehadiran.",
+		image: "/d-sqra-attendance.png",
 		technologies: ["Laravel", "TypeScript", "Supabase"],
-		repositoryUrl: null,
-		demoUrl: null,
 	},
 	{
-		title: "Sistem Informasi Perpustakaan",
+		title: "SIM Mahasiswa",
 		category: "Information System",
 		description:
-			"Aplikasi pengelolaan data buku dan anggota perpustakaan untuk mempermudah pencatatan peminjaman.",
+			"Dashboard administrasi akademik untuk mengelola data mahasiswa, program studi, status keaktifan, dan statistik mahasiswa.",
+		image: "/sim-mahasiswa.png",
 		technologies: ["Python", "Tkinter", "MySQL"],
-		repositoryUrl: null,
-		demoUrl: null,
 	},
 	{
-		title: "Website Portofolio",
-		category: "Personal Website",
+		title: "Website Form Mahasiswa",
+		category: "Student Registration Form",
 		description:
-			"Website pribadi untuk menampilkan profil, keterampilan, proyek, dan informasi kontak.",
-		technologies: ["Next.js", "React", "Tailwind CSS"],
-		repositoryUrl: null,
-		demoUrl: null,
+			"Website formulir data mahasiswa untuk mengisi NIM, nama, alamat, jenis kelamin, tanggal lahir, dan password, serta menampilkan data mahasiswa dalam tabel.",
+		image: "/website-form-mahasiswa.png",
+		technologies: ["HTML", "CSS", "JavaScript"],
 	},
 ];
 
@@ -44,7 +41,7 @@ export default function Projects() {
 	return (
 		<section
 			id="projects"
-			className="scroll-mt-28 space-y-8 py-16"
+			className="flex min-h-[calc(100svh-4rem)] scroll-mt-16 flex-col justify-center space-y-6 py-8 sm:space-y-8 sm:py-10"
 		>
 			<div className="space-y-2">
 				<p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 dark:text-blue-300">
@@ -61,29 +58,52 @@ export default function Projects() {
 				</p>
 			</div>
 
-			<div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+			<div className="grid items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
 				{projects.map((project) => (
 					<article
 						key={project.title}
-						className="theme-panel group flex flex-col overflow-hidden rounded-2xl border transition duration-300 hover:-translate-y-1 hover:border-blue-300/30 hover:shadow-xl hover:shadow-blue-950/20"
+						className="theme-panel group flex h-full flex-col overflow-hidden rounded-2xl border transition duration-300 hover:-translate-y-1 hover:border-blue-300/30 hover:shadow-xl hover:shadow-blue-950/20"
 					>
-						<div className="relative flex h-36 items-end overflow-hidden bg-gradient-to-br from-blue-200 via-indigo-100 to-slate-100 p-5 dark:from-blue-600/40 dark:via-indigo-500/25 dark:to-[#071a32]">
-							<div className="absolute -right-4 -top-10 size-36 rounded-full border border-blue-200/10 bg-blue-300/5 transition duration-500 group-hover:scale-110" />
-							<div className="absolute right-8 top-8 size-20 rounded-2xl border border-blue-100/20 bg-[#071a32]/60 shadow-xl shadow-blue-950/30" />
-							<p className="relative text-xs font-semibold uppercase tracking-[0.18em] text-blue-900 dark:text-blue-200">
+						<div
+							className={`relative flex items-end overflow-hidden ${
+								project.image
+									? "aspect-video bg-[#586a6f]"
+									: "h-36 bg-gradient-to-br from-blue-200 via-indigo-100 to-slate-100 p-5 dark:from-blue-600/40 dark:via-indigo-500/25 dark:to-[#071a32]"
+							}`}
+						>
+							{project.image ? (
+								<>
+									<Image
+										src={project.image}
+										alt={`Tampilan aplikasi ${project.title}`}
+										fill
+										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+										className="object-contain"
+									/>
+									<p className="relative z-10 m-3 rounded-full bg-slate-950/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
+										{project.category}
+									</p>
+								</>
+							) : (
+								<>
+									<div className="absolute -right-4 -top-10 size-36 rounded-full border border-blue-200/10 bg-blue-300/5 transition duration-500 group-hover:scale-110" />
+									<div className="absolute right-8 top-8 size-20 rounded-2xl border border-blue-100/20 bg-[#071a32]/60 shadow-xl shadow-blue-950/30" />
+									<p className="relative text-xs font-semibold uppercase tracking-[0.18em] text-blue-900 dark:text-blue-200">
 								{project.category}
-							</p>
+									</p>
+								</>
+							)}
 						</div>
-						<div className="flex flex-1 flex-col p-5">
-							<h3 className="theme-title text-xl font-bold">
+						<div className="flex flex-1 flex-col p-4 sm:p-5 lg:p-4">
+							<h3 className="theme-title text-lg font-bold sm:text-xl lg:text-lg">
 								{project.title}
 							</h3>
 
-							<p className="theme-subtle mt-3 flex-1 leading-7">
+							<p className="theme-subtle mt-2 flex-1 text-sm leading-6 sm:mt-3 sm:text-base sm:leading-7 lg:mt-2 lg:text-sm lg:leading-6">
 								{project.description}
 							</p>
 
-							<div className="mt-5 flex flex-wrap gap-2">
+							<div className="mt-4 flex flex-wrap gap-2 sm:mt-5 lg:mt-4">
 								{project.technologies.map((tech) => (
 									<span
 										key={tech}
@@ -94,41 +114,17 @@ export default function Projects() {
 								))}
 							</div>
 
-							<div className="mt-6 flex flex-wrap gap-3">
-							{project.demoUrl && (
+							{project.image && (
 								<a
-									href={project.demoUrl}
+									href={project.image}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-500"
+									className="mt-4 inline-flex w-fit items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-500"
 								>
-									<ExternalLink className="size-4" aria-hidden="true" />
-									Live Demo
+									<Eye className="size-4" aria-hidden="true" />
+									View
 								</a>
 							)}
-
-							{project.repositoryUrl ? (
-								<a
-									href={project.repositoryUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="theme-copy inline-flex items-center gap-2 rounded-lg border border-slate-400 px-4 py-2 text-sm font-semibold transition hover:border-blue-300/50 hover:bg-slate-900/5 dark:border-slate-600 dark:hover:bg-white/5"
-								>
-									<Code2 className="size-4" aria-hidden="true" />
-									GitHub Repository
-								</a>
-							) : (
-								<button
-									type="button"
-									disabled
-									title="Tautan repository belum tersedia"
-									className="inline-flex cursor-not-allowed items-center gap-2 rounded-lg border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-500"
-								>
-									<Code2 className="size-4" aria-hidden="true" />
-									GitHub Repository
-								</button>
-							)}
-							</div>
 						</div>
 					</article>
 				))}
