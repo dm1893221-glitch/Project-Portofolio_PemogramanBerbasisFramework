@@ -1,6 +1,4 @@
-# Portofolio Danis
-
-# 🚀 Personal Website - [Nama Anda]
+# 🚀 Personal Website - Danis Martanius
 
 Repositori ini dibuat untuk tugas **UTS – Pemrograman Berbasis Framework**. Proyek ini adalah sebuah aplikasi web portofolio personal interaktif dan modern yang dibangun menggunakan **React JS**[cite: 2].
 
@@ -13,7 +11,7 @@ Repositori ini dibuat untuk tugas **UTS – Pemrograman Berbasis Framework**. Pr
 
 ## 📖 Tentang Proyek
 
-Website portofolio personal ini dirancang untuk menampilkan profil profesional, keahlian teknis (*tech stack*), dan daftar proyek yang telah dikerjakan. Website ini dibangun agar responsif dan nyaman diakses di berbagai perangkat.
+Website portofolio personal ini dirancang untuk menampilkan profil profesional, keahlian teknis, dan daftar proyek yang telah dikerjakan. Website ini dibangun agar responsif dan nyaman diakses di berbagai perangkat.
 
 ---
 
@@ -34,8 +32,29 @@ Website portofolio personal ini dirancang untuk menampilkan profil profesional, 
 
 ---
 
+## 📸 Dokumentasi / Screenshot Website
+
+Berikut adalah beberapa tampilan antarmuka dari aplikasi Personal Website yang telah dibuat:
+
+### 1. Tampilan Halaman Beranda (Home)
+> Bagian awal saat pengunjung membuka website, menampilkan sambutan serta perkenalan singkat mengenai profil.
+![Halaman Beranda](./screenshots/home.png)
+
+### 2. Tampilan Halaman Tentang Saya & Keahlian (About & Skills)
+> Berisi informasi latar belakang, riwayat pendidikan, serta daftar *tech stack* dan keahlian teknis yang dikuasai.
+![Halaman About](./screenshots/about.png)
+
+### 3. Tampilan Halaman Proyek (Portfolio)
+> Menampilkan daftar proyek pilihan yang pernah dikerjakan lengkap dengan deskripsi dan tautan terkait.
+![Halaman Portfolio](./screenshots/portfolio.png)
+
+### 4. Tampilan Formulir Kontak (Contact)
+> Antarmuka interaktif yang memudahkan pengunjung atau klien untuk mengirimkan pesan maupun terhubung langsung.
+![Halaman Contact](./screenshots/contact.png)
+
 ## ⚙️ Cara Instalasi & Menjalankan Proyek
 
+---
 Ikuti langkah-langkah berikut untuk menjalankan proyek ini secara lokal di komputer Anda:
 
 1. **Clone repositori ini:**
