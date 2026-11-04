@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ArrowDown, Sparkles, Zap } from "lucide-react";
 
 export default function Header() {
@@ -58,13 +57,11 @@ export default function Header() {
 				<div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-xs">
 					<div className="absolute inset-8 rounded-full bg-blue-500/30 blur-3xl" />
 					<div className="relative mx-auto aspect-[4/4.2] w-full max-w-sm overflow-hidden rounded-[2rem] border border-blue-200/20 bg-[#0b2442] shadow-2xl shadow-blue-950/50">
-						<Image
+						<img
 							src="/profile.jpg"
 							alt="Danis"
-							fill
-							sizes="(max-width: 768px) 80vw, 40vw"
-							className="object-cover object-[center_10%]"
-							priority
+							className="absolute inset-0 size-full object-cover object-[center_10%]"
+							fetchPriority="high"
 						/>
 						<div className="absolute inset-0 bg-gradient-to-t from-[#06162b]/75 via-transparent to-transparent" />
 						<div className="absolute bottom-5 right-5 flex size-11 items-center justify-center rounded-full border border-blue-200/30 bg-[#071a32]/90 text-blue-200 shadow-lg">

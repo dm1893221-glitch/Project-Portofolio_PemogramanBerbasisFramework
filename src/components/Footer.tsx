@@ -5,7 +5,7 @@ export default function Footer() {
 			<div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
 				<p className="theme-subtle text-sm">
 					© {new Date().getFullYear()} Danis. Dibuat
-					dengan Next.js dan Tailwind CSS.
+					dengan React dan Tailwind CSS.
 				</p>
 
 				<a

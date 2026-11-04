@@ -6,7 +6,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function App() {
     return (
         <div className="theme-page min-h-screen overflow-hidden selection:bg-blue-500/30">
             <Navigasi />

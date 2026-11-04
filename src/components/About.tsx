@@ -1,6 +1,4 @@
 
-import Image from "next/image";
-
 export default function About() {
 	return (
 		<section
@@ -36,12 +34,12 @@ export default function About() {
 				</div>
 
 				<div className="theme-panel-raised relative min-h-64 overflow-hidden rounded-2xl border shadow-xl shadow-blue-950/10 sm:min-h-80 lg:h-[min(55svh,24rem)] lg:min-h-0">
-					<Image
+					<img
 						src="/about-illustration.jpeg"
 						alt="Laptop dan ponsel dengan tampilan kode"
-						fill
-						sizes="(max-width: 1024px) 100vw, 45vw"
-						className="object-cover"
+						className="absolute inset-0 size-full object-cover"
+						loading="lazy"
+						decoding="async"
 					/>
 					<div className="absolute inset-0 bg-gradient-to-t from-[#06162b]/45 via-transparent to-transparent" />
 				</div>

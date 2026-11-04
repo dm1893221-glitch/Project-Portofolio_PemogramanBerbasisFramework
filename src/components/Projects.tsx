@@ -1,6 +1,5 @@
 
 import { Eye } from "lucide-react";
-import Image from "next/image";
 
 type Project = {
 	title: string;
@@ -73,12 +72,12 @@ export default function Projects() {
 						>
 							{project.image ? (
 								<>
-									<Image
+									<img
 										src={project.image}
 										alt={`Tampilan aplikasi ${project.title}`}
-										fill
-										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-										className="object-contain"
+										className="absolute inset-0 size-full object-contain"
+										loading="lazy"
+										decoding="async"
 									/>
 									<p className="relative z-10 m-3 rounded-full bg-slate-950/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
 										{project.category}
