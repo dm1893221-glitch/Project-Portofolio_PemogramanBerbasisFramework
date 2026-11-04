@@ -23,14 +23,12 @@ export default function Header() {
 					</h1>
 
 					<p className="theme-title mb-3 text-lg font-medium sm:text-2xl">
-						Spesialisasi di{" "}
-						<span className="text-blue-700 dark:text-blue-300">Web Development</span>
+						Web Development in{" "}
+						<span className="text-blue-700 dark:text-blue-300">Training & Informatics Student</span>
 					</p>
 
 					<p className="theme-copy mb-5 max-w-xl text-sm leading-7 sm:text-base">
-						Saya tertarik pada pengembangan website, teknologi informasi, dan
-						desain antarmuka. Saya senang belajar, mencoba hal baru, serta
-						membangun solusi digital yang bermanfaat.
+						Mahasiswa Teknik Informatika yang fokus mempelajari web development. Saya berdedikasi menciptakan solusi digital yang fungsional, responsif, dan memberikan pengalaman pengguna terbaik.
 					</p>
 
 					<div className="mb-5 flex flex-wrap gap-3">

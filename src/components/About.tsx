@@ -10,36 +10,27 @@ export default function About() {
 			<div className="grid w-full items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
 				<div>
 					<div className="mb-5 space-y-2">
-						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 dark:text-blue-300">
+						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 dark:text-blue-300 sm:text-sm">
 							Perkenalan
 						</p>
 
-						<h2 className="theme-title text-3xl font-bold sm:text-4xl">
+						<h2 className="theme-title text-3xl font-bold sm:text-4xl lg:text-5xl">
 							Tentang Saya
 						</h2>
 					</div>
 
-					<div className="theme-copy max-w-2xl space-y-3 text-sm leading-6 sm:text-base sm:leading-7 lg:text-sm lg:leading-6">
+					<div className="theme-copy max-w-2xl space-y-3 text-base leading-7 sm:text-base sm:leading-7 lg:text-lg">
 						<p>
-							Halo! Saya Danis, mahasiswa Teknik Informatika yang
-							memiliki ketertarikan dalam bidang teknologi informasi,
-							pengembangan website, dan desain antarmuka pengguna.
-							Saya senang mempelajari hal-hal baru dan mengembangkan
-							keterampilan di bidang teknologi.
+							Saya Danis, Mahasiswa Teknik Informatika yang berdedikasi mendalami web development. 
+							Berbekal rasa ingin tahu yang tinggi, saya selalu bersemangat memecahkan masalah melalui kode dan desain antarmuka.
 						</p>
 
 						<p>
-							Saya terus belajar menggunakan HTML, CSS, JavaScript,
-							PHP, Laravel, dan teknologi pengembangan web lainnya.
-							Melalui tugas kuliah dan proyek pribadi, saya berusaha
-							meningkatkan kemampuan pemrograman, berpikir logis,
-							dan pemecahan masalah.
+							Belajar menguasai dasar-dasar web modern seperti HTML, CSS, JavaScript, hingga framework seperti Laravel, saya terus mengasah logic programming dan problem solving lewat proyek riil.
 						</p>
 
 						<p>
-							Portofolio ini menjadi tempat untuk menampilkan hasil
-							proyek, keterampilan, dan proses belajar saya dalam
-							mengembangkan solusi digital yang kreatif dan bermanfaat.
+							Portofolio ini merupakan wujud dari dedikasi dan proses belajar saya dalam menghadirkan solusi digital yang kreatif.
 						</p>
 					</div>
 				</div>
