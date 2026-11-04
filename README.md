@@ -41,16 +41,16 @@ Berikut adalah beberapa tampilan antarmuka dari aplikasi Personal Website yang t
 > <img width="1765" height="903" alt="image" src="https://github.com/user-attachments/assets/4963b1ee-2f36-47eb-b230-51cbfd2981e3" />
 
 ### 2. Tampilan Halaman Tentang Saya & Keahlian (About & Skills)
-> Berisi informasi latar belakang, riwayat pendidikan, serta daftar *tech stack* dan keahlian teknis yang dikuasai.
-![Halaman About](./screenshots/about.png)
+> Berisi informasi latar belakang dan keahlian teknis yang dikuasai.
+<img width="1631" height="887" alt="image" src="https://github.com/user-attachments/assets/c3f9a79f-1808-4aec-9f8d-70bceb1d3372" />
 
 ### 3. Tampilan Halaman Proyek (Portfolio)
-> Menampilkan daftar proyek pilihan yang pernah dikerjakan lengkap dengan deskripsi dan tautan terkait.
-![Halaman Portfolio](./screenshots/portfolio.png)
+> Menampilkan daftar proyek pilihan yang pernah saya kerjakan.
+<img width="1612" height="848" alt="image" src="https://github.com/user-attachments/assets/88772abf-243a-4466-b9ed-819f126fb93e" />
 
 ### 4. Tampilan Formulir Kontak (Contact)
-> Antarmuka interaktif yang memudahkan pengunjung atau klien untuk mengirimkan pesan maupun terhubung langsung.
-![Halaman Contact](./screenshots/contact.png)
+> Antarmuka interaktif yang memudahkan pengunjung untuk mengirimkan pesan maupun terhubung langsung.
+<img width="1313" height="763" alt="image" src="https://github.com/user-attachments/assets/46bb4764-819a-4bbf-abf6-8df84ef86b4f" />
 
 ## ⚙️ Cara Instalasi & Menjalankan Proyek
 
