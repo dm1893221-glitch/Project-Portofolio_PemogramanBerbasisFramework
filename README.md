@@ -38,7 +38,7 @@ Berikut adalah beberapa tampilan antarmuka dari aplikasi Personal Website yang t
 
 ### 1. Tampilan Halaman Beranda (Home)
 > Bagian awal saat pengunjung membuka website, menampilkan sambutan serta perkenalan singkat mengenai profil.
-![Halaman Beranda](./screenshots/home.png)
+![Halaman Beranda]<img width="1765" height="903" alt="image" src="https://github.com/user-attachments/assets/4963b1ee-2f36-47eb-b230-51cbfd2981e3" />
 
 ### 2. Tampilan Halaman Tentang Saya & Keahlian (About & Skills)
 > Berisi informasi latar belakang, riwayat pendidikan, serta daftar *tech stack* dan keahlian teknis yang dikuasai.
