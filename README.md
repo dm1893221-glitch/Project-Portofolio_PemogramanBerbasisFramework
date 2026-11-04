@@ -83,5 +83,6 @@ npm run preview
 ```
 
 Portofolio ini dibuat dengan React, Vite, TypeScript, Tailwind CSS, dan Lucide React.
-npm run lint
-```
+
+link vercel
+https://project-portofolio-pemograman-berba-kappa.vercel.app/#about
