@@ -21,6 +21,7 @@ Website portofolio personal ini dirancang untuk menampilkan profil profesional, 
 * 👨‍💻 **Tentang Saya / About**: Informasi detail mengenai latar belakang dan keahlian (*skills*).
 * 💼 **Portofolio / Proyek**: Daftar proyek pilihan lengkap dengan teknologi yang digunakan.
 * 📬 **Kontak**: Formulir atau tautan langsung untuk terhubung dengan saya.
+* 🌙☀️ **Mode Gelap & Terang (Dark/Light Mode)**: Fitur pergantian tema tampilan secara *real-time* untuk kenyamanan mata pengguna di berbagai kondisi pencahayaan.
 
 ---
 
